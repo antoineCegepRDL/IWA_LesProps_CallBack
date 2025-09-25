@@ -3,9 +3,6 @@ import '../style/button1.scss'
 import AFunkyButton from '../components/AFunkyButton'
 
 const TheExercice1 = () => {
-  const handleClick = () => {
-    alert("WRAR!")
-  }
   return (
     <>
       <h2>Premier défi</h2>
@@ -14,7 +11,7 @@ const TheExercice1 = () => {
       <p>Pour ajouter un événement au clic, nous allons utiliser une fonction. comme ceci <code> onClick: () =&gt; void;</code></p>
       <p>Tu as un exemple dans le readme</p>
       <div className="ex1">
-        <AFunkyButton onClick={handleClick} />
+        <AFunkyButton/>
       </div>
     </>
   )

@@ -4,21 +4,17 @@ import '../style/Modal.scss'
 // Petit rappel. 
 // 1 crée props interface
 // 2 ajoute props dans le composant
-// 3 utilise les props dans le composant
+// 3 ajoute les props dans le composant
 
-interface PropsInterface {
-  onClick: (color?: DinoColorEnum) => void;
-  value?: string;
-  color?: DinoColorEnum;
-}
+const AFunkyButton = () => {
 
-const AFunkyButton = ({ onClick, color, value = "🦖 RAWR" }: PropsInterface) => {
-  
   const handleClick = () => {
-    onClick(color!);
+    // appel le callback onclick ici!
   }
   return (
-    <div className="dino-button" onClick={handleClick} style={{ backgroundColor: color }}>
+    //As-tu vu? J'ai déjà ajouté le onclick pour toi!
+    //J'ai aussi mis la couleur green au background. Tu pourras le changer avec les props dans l'exercice 3
+    <div className="dino-button" onClick={handleClick} style={{ backgroundColor: "green" }}>
         <div className="funky-border"></div>
         <div className="button-body"></div>
         <div className="sparkle"></div>
@@ -29,7 +25,7 @@ const AFunkyButton = ({ onClick, color, value = "🦖 RAWR" }: PropsInterface) =
         <div className="dino-scales"></div>
         <div className="dino-scales"></div>
         <div className="tail"></div>
-        <div className="dino-text">{value}</div>
+        <div className="dino-text">🦖 RAWR</div>
     </div>
   )
 }
