@@ -1,0 +1,220 @@
+.ex1 {
+    @keyframes groovyBg {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .dino-button {
+        position: relative;
+        width: 300px;
+        height: 120px;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        &:active {
+            transform: scale(0.95) rotate(-2deg);
+        }
+    }
+
+    .button-body {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ff6b9d, #c06c84, #f67280, #355c7d);
+        border-radius: 50px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+            inset 0 -3px 10px rgba(0, 0, 0, 0.3),
+            inset 0 3px 10px rgba(255, 255, 255, 0.3);
+        animation: colorShift 3s ease-in-out infinite;
+    }
+
+    @keyframes colorShift {
+
+        0%,
+        100% {
+            filter: hue-rotate(0deg);
+        }
+
+        50% {
+            filter: hue-rotate(90deg);
+        }
+    }
+
+    .dino-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 3px 3px 0 #ff00ff,
+            -3px -3px 0 #00ffff,
+            3px -3px 0 #ffff00,
+            -3px 3px 0 #ff0000;
+        animation: textWobble 0.5s ease-in-out infinite;
+        z-index: 10;
+    }
+
+    @keyframes textWobble {
+
+        0%,
+        100% {
+            transform: translate(-50%, -50%) rotate(-2deg);
+        }
+
+        50% {
+            transform: translate(-50%, -50%) rotate(2deg);
+        }
+    }
+
+    .sparkle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, white, transparent);
+        border-radius: 50%;
+        animation: sparkleMove 2s linear infinite;
+
+        &:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(3) {
+            top: 40%;
+            left: 90%;
+            animation-delay: 1s;
+        }
+
+        &:nth-child(4) {
+            top: 70%;
+            left: 20%;
+            animation-delay: 1.5s;
+        }
+    }
+
+
+    @keyframes sparkleMove {
+        0% {
+            transform: scale(0) rotate(0deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scale(1.5) rotate(180deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(0) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .dino-scales {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: lime;
+        border-radius: 50% 50% 0 50%;
+        animation: scaleWiggle 1s ease-in-out infinite;
+
+        &:nth-child(5) {
+            top: -15px;
+            left: 30%;
+            animation-delay: 0s;
+        }
+
+        &:nth-child(6) {
+            top: -15px;
+            left: 50%;
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(7) {
+            top: -15px;
+            left: 70%;
+            animation-delay: 0.4s;
+        }
+    }
+
+
+    @keyframes scaleWiggle {
+
+        0%,
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-5px) rotate(10deg);
+        }
+    }
+
+    .tail {
+        position: absolute;
+        width: 80px;
+        height: 40px;
+        background: linear-gradient(90deg, #ff6b9d, transparent);
+        border-radius: 50%;
+        right: -60px;
+        top: 40px;
+        animation: tailWag 0.8s ease-in-out infinite;
+        transform-origin: left center;
+    }
+
+    @keyframes tailWag {
+
+        0%,
+        100% {
+            transform: rotate(-20deg);
+        }
+
+        50% {
+            transform: rotate(20deg);
+        }
+    }
+
+    .funky-border {
+        position: absolute;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        top: -10px;
+        left: -10px;
+        border: 5px dashed yellow;
+        border-radius: 55px;
+        animation: borderSpin 10s linear infinite;
+    }
+
+    @keyframes borderSpin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
