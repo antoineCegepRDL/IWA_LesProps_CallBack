@@ -24,7 +24,7 @@ const TheExercice3 = () => {
       <p>
         Tu devras passer la couleur du bouton actuel dans la fonction onClick du
         bouton comme ceci :
-        <code>onClick: (color: DinoColorEnum) =&gt; void;</code>
+        <code>onClick: (color?: DinoColorEnum) =&gt; void;</code>
       </p>
       <p>Regarde comment j'ai fait pour créer le une liste de boutons avec chacune des valeurs dans mon enum. Très pratique pour ton TP!!</p>
       <div className="flex ex3">
